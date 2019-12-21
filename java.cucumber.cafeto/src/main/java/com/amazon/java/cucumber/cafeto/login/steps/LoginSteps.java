@@ -16,6 +16,7 @@ import java.util.logging.Logger;
 import static org.junit.Assert.*;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.Select;
 
 /**
  *
@@ -31,7 +32,10 @@ public class LoginSteps {
     @Given("The user is on the login page")
     public void given_The_user_is_on_the_login_page(){
         LOGGER.info("Entrando: I navigate on the page aws.amazon.com");
-        BrowserDriver.getCurrentDriver().get("https://signin.aws.amazon.com/signin?redirect_uri=https%3A%2F%2Faws.amazon.com%2Fmarketplace%2Fmanagement%2Fsignin%3Fstate%3DhashArgs%2523%26isauthcode%3Dtrue&client_id=arn%3Aaws%3Aiam%3A%3A015428540659%3Auser%2Faws-mp-seller-management-portal&forceMobileApp=0");
+        //BrowserDriver.getCurrentDriver().get("https://signin.aws.amazon.com/signin?redirect_uri=https%3A%2F%2Faws.amazon.com%2Fmarketplace%2Fmanagement%2Fsignin%3Fstate%3DhashArgs%2523%26isauthcode%3Dtrue&client_id=arn%3Aaws%3Aiam%3A%3A015428540659%3Auser%2Faws-mp-seller-management-portal&forceMobileApp=0");
+        BrowserDriver.getCurrentDriver().get("https://aws.amazon.com/es/");
+        BrowserDriver.show();
+        BrowserDriver.getCurrentDriver().get("https://portal.aws.amazon.com/gp/aws/manageYourAccount?nc2=h_m_ma");
     }
  
     @When("The user fills in account id with {string}")
